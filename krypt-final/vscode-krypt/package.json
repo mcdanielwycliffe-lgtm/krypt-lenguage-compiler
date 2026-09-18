@@ -1,0 +1,28 @@
+{
+  "name": "krypt-language-support",
+  "displayName": "Krypt Language Support",
+  "description": "Realce de sintaxe para a linguagem de programação Krypt.",
+  "version": "0.1.0",
+  "publisher": "krypt-lang",
+  "license": "MIT",
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [{
+      "id": "krypt",
+      "aliases": ["Krypt", "krypt"],
+      "extensions": [".krypt"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "krypt",
+      "scopeName": "source.krypt",
+      "path": "./syntaxes/krypt.tmLanguage.json"
+    }],
+    "iconThemes": [{
+      "id": "krypt-icons",
+      "label": "Krypt Icons",
+      "path": "./icons/krypt-icon-theme.json"
+    }]
+  }
+}

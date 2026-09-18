@@ -1,0 +1,20 @@
+// Janela e eventos da Krypt
+import <window>
+import <iolib>
+
+fun clicked(x, y) {
+    print("Clique em", x, y);
+}
+
+fun pressed(key) {
+    print("Tecla:", key);
+    if (key == "Escape") { window.close(); }
+}
+
+window.create("Minha janela Krypt", 640, 360);
+window.set_background("#172033");
+window.text("KRYPT", 40, 35, 32, "#7dd3fc");
+window.text("Clique ou pressione Escape para sair", 40, 90, 16, "white");
+iolib.on_click(clicked);
+iolib.on_key("Escape", pressed);
+window.show();

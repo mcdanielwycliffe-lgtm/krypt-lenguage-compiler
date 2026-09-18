@@ -1,0 +1,11 @@
+import helpers.krypt;
+import <math>;
+import <gates>;
+import <psics>;
+
+print(dobro(21));
+print(math.sqrt(81));
+print(gates.xor(true, false));
+print(gates.and(true, true));
+print(psics.force(10, 9.8));
+print(psics.position(0, 2, 1, 3));

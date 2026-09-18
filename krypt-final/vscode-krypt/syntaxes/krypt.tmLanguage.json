@@ -1,0 +1,93 @@
+{
+  "name": "Krypt",
+  "scopeName": "source.krypt",
+  "fileTypes": ["krypt"],
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#imports" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#keywords" },
+    { "include": "#constants" },
+    { "include": "#functions" },
+    { "include": "#operators" },
+    { "include": "#builtin-functions" },
+    { "include": "#members" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        { "name": "comment.line.double-slash.krypt", "match": "//.*$" }
+      ]
+    },
+    "imports": {
+      "patterns": [
+        { "name": "keyword.control.import.krypt", "match": "\\bimport\\b" },
+        { "name": "punctuation.definition.import.begin.krypt", "match": "<" },
+        { "name": "entity.name.type.library.krypt", "match": "(?<=<)[A-Za-z_][A-Za-z0-9_]*(?=>)" },
+        { "name": "punctuation.definition.import.end.krypt", "match": ">" }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.krypt",
+          "begin": "\"",
+          "end": "\"",
+          "beginCaptures": { "0": { "name": "punctuation.definition.string.begin.krypt" } },
+          "endCaptures": { "0": { "name": "punctuation.definition.string.end.krypt" } },
+          "patterns": [{ "name": "constant.character.escape.krypt", "match": "\\\\." }]
+        },
+        {
+          "name": "string.quoted.single.krypt",
+          "begin": "'",
+          "end": "'",
+          "beginCaptures": { "0": { "name": "punctuation.definition.string.begin.krypt" } },
+          "endCaptures": { "0": { "name": "punctuation.definition.string.end.krypt" } },
+          "patterns": [{ "name": "constant.character.escape.krypt", "match": "\\\\." }]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        { "name": "constant.numeric.float.krypt", "match": "\\b[0-9]+\\.[0-9]+\\b" },
+        { "name": "constant.numeric.integer.krypt", "match": "\\b[0-9]+\\b" }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        { "name": "keyword.control.krypt", "match": "\\b(?:var|fun|if|else|while|return)\\b" },
+        { "name": "keyword.operator.logical.krypt", "match": "\\b(?:and|or|not)\\b" }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        { "name": "constant.language.boolean.krypt", "match": "\\b(?:true|false)\\b" },
+        { "name": "constant.language.null.krypt", "match": "\\bnull\\b" }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        { "name": "entity.name.function.krypt", "match": "\\b[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\()" }
+      ]
+    },
+    "builtin-functions": {
+      "patterns": [
+        { "name": "support.function.builtin.krypt", "match": "\\b(?:print|len|str|int|float)\\b" }
+      ]
+    },
+    "members": {
+      "patterns": [
+        { "name": "support.function.member.krypt", "match": "(?<=\\.)[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\()" },
+        { "name": "variable.other.member.krypt", "match": "(?<=\\.)[A-Za-z_][A-Za-z0-9_]*" }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        { "name": "keyword.operator.comparison.krypt", "match": "==|!=|<=|>=|<|>" },
+        { "name": "keyword.operator.assignment.krypt", "match": "=" },
+        { "name": "keyword.operator.arithmetic.krypt", "match": "\\+|-|\\*|/|%|!|&&|\\|\\|" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "iconDefinitions": {
+    "krypt-file": { "iconPath": "./krypt-file.svg" }
+  },
+  "fileNames": {
+    "krypt.krypt": "krypt-file"
+  },
+  "fileExtensions": {
+    "krypt": "krypt-file"
+  }
+}
