@@ -1,0 +1,4 @@
+// Exemplo mínimo da linguagem Krypt
+print("Olá, Krypt!");
+var answer = 6 * 7;
+print("Resposta:", answer);
