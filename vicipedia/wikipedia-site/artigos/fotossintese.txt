@@ -1,0 +1,27 @@
+TITULO: Fotossíntese
+CATEGORIA: Ciências
+TAGS: fotossintese, plantas, biologia, clorofila, energia solar
+
+A fotossíntese é o processo pelo qual plantas, algas e algumas bactérias convertem energia luminosa em energia química, produzindo compostos orgânicos a partir de dióxido de carbono e água, com liberação de oxigênio como subproduto.
+
+Onde ocorre
+Em plantas, a fotossíntese ocorre principalmente nas folhas, dentro de estruturas celulares chamadas cloroplastos. Esses cloroplastos contêm um pigmento verde chamado clorofila, responsável por capturar a luz solar.
+
+Equação geral
+De forma simplificada, o processo pode ser resumido pela seguinte equação:
+
+6 CO2 + 6 H2O + luz solar -> C6H12O6 + 6 O2
+
+Ou seja, seis moléculas de dióxido de carbono e seis de água, na presença de luz, produzem uma molécula de glicose e seis moléculas de oxigênio.
+
+Etapas do processo
+A fotossíntese é dividida em duas grandes etapas:
+
+1. Fase clara (ou fotoquímica): ocorre nas membranas dos tiroides, dentro do cloroplasto, e depende diretamente da luz. Nessa fase, a energia luminosa é convertida em energia química (ATP e NADPH), com liberação de oxigênio a partir da quebra de moléculas de água.
+
+2. Fase escura (ou Ciclo de Calvin): não depende diretamente da luz e ocorre no estroma do cloroplasto. Nessa etapa, o ATP e o NADPH produzidos na fase anterior são usados para transformar dióxido de carbono em glicose.
+
+Importância
+A fotossíntese é fundamental para a vida na Terra, pois é a base da maioria das cadeias alimentares e responsável pela produção do oxigênio presente na atmosfera.
+
+VEJA_TAMBEM: nenhum

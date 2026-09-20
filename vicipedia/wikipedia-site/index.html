@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vicipédia — a enciclopédia de arquivos</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="cabecalho-interno">
+      <a href="#" class="marca" id="link-inicio">
+        <span class="marca-icone">V</span>
+        <span class="marca-texto">
+          <strong>Vicipédia</strong>
+          <small>a enciclopédia de arquivos</small>
+        </span>
+      </a>
+
+      <form class="form-busca" id="form-busca" autocomplete="off">
+        <input
+          type="text"
+          id="campo-busca"
+          class="campo-busca"
+          placeholder="Pesquisar sobre um assunto…"
+          aria-label="Pesquisar artigo"
+        >
+        <button type="submit" class="botao-busca" id="botao-busca">
+          Pesquisar
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <main class="conteudo">
+
+    <!-- TELA INICIAL -->
+    <section id="tela-inicio" class="tela">
+      <div class="boas-vindas">
+        <h1>Bem-vindo à Vicipédia</h1>
+        <p class="subtitulo">
+          Uma enciclopédia livre construída a partir de arquivos de texto.
+          Digite um assunto na busca acima para consultar um verbete.
+        </p>
+
+        <div class="bloco-sugestoes">
+          <h2>Verbetes em destaque</h2>
+          <ul id="lista-sugestoes" class="lista-sugestoes">
+            <!-- preenchido via JS -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELA DE RESULTADO -->
+    <article id="tela-artigo" class="tela oculto">
+      <div class="artigo-caixa">
+        <p class="artigo-categoria" id="artigo-categoria"></p>
+        <h1 id="artigo-titulo"></h1>
+        <hr class="artigo-regua">
+        <div id="artigo-corpo" class="artigo-corpo"></div>
+
+        <div id="artigo-veja-tambem" class="veja-tambem oculto">
+          <h2>Veja também</h2>
+          <ul id="lista-veja-tambem"></ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- TELA DE NENHUM RESULTADO -->
+    <section id="tela-vazio" class="tela oculto">
+      <div class="vazio-caixa">
+        <p class="vazio-simbolo">?</p>
+        <h1>Nenhum artigo encontrado</h1>
+        <p id="vazio-mensagem" class="vazio-texto"></p>
+        <div class="bloco-sugestoes">
+          <h2>Talvez você queira dizer</h2>
+          <ul id="lista-parecidos" class="lista-sugestoes"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELA DE CARREGANDO -->
+    <section id="tela-carregando" class="tela oculto">
+      <p class="carregando-texto">Consultando os arquivos…</p>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>
+      Vicipédia é uma enciclopédia fictícia cujos verbetes vêm de arquivos
+      <code>.txt</code> guardados em <code>/artigos</code>.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

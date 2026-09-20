@@ -1,0 +1,89 @@
+VICIPÉDIA — como usar
+======================
+
+Esta é uma "wikipédia" que roda a partir de arquivos .txt. O HTML mostra
+um campo de busca; ao clicar em "Pesquisar", o JavaScript lê os arquivos
+.txt da pasta "artigos" e mostra o que encontrar.
+
+
+IMPORTANTE: não abra o index.html com duplo clique
+----------------------------------------------------
+Navegadores bloqueiam, por segurança, que uma página aberta diretamente
+do disco (endereço começando com "file://") leia outros arquivos do
+computador com JavaScript. Por isso, o site precisa ser aberto através
+de um servidor local. Isso é rápido e não exige instalar nada além do
+que você provavelmente já tem.
+
+Opção 1 — Python (mais simples)
+  1. Abra um terminal dentro da pasta do projeto (a pasta que contém
+     index.html, estilo.css, script.js e a pasta artigos).
+  2. Rode:
+         python3 -m http.server 8000
+     (no Windows, pode ser apenas "python" em vez de "python3")
+  3. Abra o navegador em:
+         http://localhost:8000
+
+Opção 2 — Extensão "Live Server" (VS Code)
+  1. Instale a extensão "Live Server" no VS Code.
+  2. Clique com o botão direito em index.html e escolha
+     "Open with Live Server".
+
+
+Como adicionar um novo artigo
+-------------------------------
+1. Crie um arquivo novo dentro da pasta "artigos", terminado em .txt.
+   Use um nome sem espaços e sem acentos, com hifens, por exemplo:
+         guerra-punica.txt
+
+2. Escreva o conteúdo seguindo este formato:
+
+   TITULO: Guerras Púnicas
+   CATEGORIA: Geografia e História
+   TAGS: guerras punicas, cartago, roma, anibal
+
+   Texto da introdução do artigo, em um ou mais parágrafos...
+
+   Nome de uma Seção
+   Mais um parágrafo, agora dentro dessa seção...
+
+   VEJA_TAMBEM: imperio-romano, republica-romana
+
+   Observações sobre o formato:
+   - As linhas TITULO, CATEGORIA e TAGS são opcionais, mas recomendadas.
+     Se você não colocar TITULO, o próprio nome do arquivo vira o título.
+   - TAGS são palavras-chave separadas por vírgula, usadas na busca.
+   - Uma linha isolada, curta e sem ponto final no final vira um
+     subtítulo de seção (ex.: "Início de carreira").
+   - Um bloco de linhas todas começando com um número e ponto
+     ("1. algo") vira uma lista numerada.
+   - Um bloco de linhas todas começando com hífen ("- algo") vira uma
+     lista com marcadores.
+   - VEJA_TAMBEM lista os "slugs" (nome do arquivo sem o .txt) de
+     outros artigos relacionados, separados por vírgula. Use "nenhum"
+     se não houver.
+
+3. Abra o arquivo "artigos/indice.json" e adicione o nome do novo
+   arquivo .txt à lista, por exemplo:
+
+       [
+         "introducao-a-roma.txt",
+         "guerra-punica.txt"
+       ]
+
+   Esse arquivo indice.json existe porque o JavaScript, rodando no
+   navegador, não consegue "listar" sozinho os arquivos de uma pasta —
+   ele precisa saber os nomes de antemão.
+
+4. Salve tudo e atualize a página no navegador. O novo artigo já pode
+   ser encontrado pela busca (por título, tag ou palavras do texto).
+
+
+Artigos incluídos nesta primeira versão
+------------------------------------------
+- introducao-a-roma.txt
+- historia-da-monarquia-romana.txt
+- republica-romana.txt
+- imperio-romano.txt
+- julio-cesar.txt
+- fotossintese.txt (um tema fora de Roma, só para mostrar que a busca
+  funciona com qualquer assunto, não só história romana)
